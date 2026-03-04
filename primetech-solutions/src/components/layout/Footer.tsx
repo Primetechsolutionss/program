@@ -46,16 +46,16 @@ export default function Footer() {
               <p>
                 <span className="text-slate-300 font-medium">Email:</span>{' '}
                 <a
-                  href="mailto:hello@primetechsolutions.se"
+                  href="mailto:William.einald@primetechsolutions.se"
                   className="hover:text-white transition-colors"
                 >
-                  hello@primetechsolutions.se
+                  William.einald@primetechsolutions.se
                 </a>
               </p>
               <p>
                 <span className="text-slate-300 font-medium">Phone:</span>{' '}
-                <a href="tel:+46XXXXXXXXX" className="hover:text-white transition-colors">
-                  +46 XX XXX XX XX
+                <a href="tel:+46723037185" className="hover:text-white transition-colors">
+                  +46 72 303 71 85
                 </a>
               </p>
               <p>
