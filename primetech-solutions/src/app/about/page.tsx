@@ -99,13 +99,13 @@ export default function AboutPage() {
       {/* Page header */}
       <div className="bg-navy-800 pt-28 pb-20 lg:pt-36 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">
             Who we are
           </p>
-          <h1 className="text-6xl lg:text-7xl font-bold text-white tracking-tight">
+          <h1 className="text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
             About Primetech Solutions
           </h1>
-          <p className="mt-4 text-lg text-slate-300 max-w-xl leading-relaxed">
+          <p className="mt-4 text-lg text-slate-300 max-w-2xl leading-relaxed">
             IT consultancy built by practitioners, for organisations that depend on their technology.
           </p>
         </div>
@@ -114,25 +114,27 @@ export default function AboutPage() {
       {/* Company story */}
       <section className="py-20 lg:py-28 bg-white" aria-labelledby="story-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Full-width heading */}
+          <div className="mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">
+              Our background
+            </p>
+            <h2 id="story-heading" className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+              Built by practitioners who know what good IT looks like
+            </h2>
+          </div>
+          {/* Two-column: image left, text right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-3">
-                Our background
-              </p>
-              <h2 id="story-heading" className="text-[2.75rem] lg:text-[2.75rem] leading-tight font-bold text-slate-900 tracking-tight">
-                Built by practitioners who know what good IT looks like
-              </h2>
-              <div className="mt-8 rounded-2xl overflow-hidden">
-                <Image
-                  src="/Images/about.PNG"
-                  alt="William Einald - CEO & Founder"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            <div className="rounded-2xl overflow-hidden aspect-[3/4]">
+              <Image
+                src="/Images/about.PNG"
+                alt="William Einald - CEO & Founder"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="space-y-5 text-sm text-slate-600 leading-relaxed">
+            <div className="space-y-5 text-base text-slate-600 leading-relaxed">
               <p>
                 Primetech Solutions was founded by IT engineers who spent years working inside
                 organisations — managing infrastructure, supporting end users, and navigating the
