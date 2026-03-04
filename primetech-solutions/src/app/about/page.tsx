@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import FinalCTA from '@/components/sections/FinalCTA'
 
 export const metadata: Metadata = {
@@ -121,6 +122,15 @@ export default function AboutPage() {
               <h2 id="story-heading" className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Built by practitioners who know what good IT looks like
               </h2>
+              <div className="mt-8 rounded-2xl overflow-hidden">
+                <Image
+                  src="/Images/about.PNG"
+                  alt="William Einald - CEO & Founder"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
             <div className="space-y-5 text-sm text-slate-600 leading-relaxed">
               <p>
