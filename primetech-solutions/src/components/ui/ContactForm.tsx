@@ -112,9 +112,9 @@ export default function ContactForm() {
     setStatus('loading')
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formspree.io/f/mdalzzae', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(formData),
       })
 
@@ -308,8 +308,8 @@ export default function ContactForm() {
           className="mt-5 p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700"
         >
           Something went wrong on our end. Please try again or contact us directly at{' '}
-          <a href="mailto:hello@primetechsolutions.se" className="font-medium underline">
-            hello@primetechsolutions.se
+          <a href="mailto:William.einald@primetechsolutions.se" className="font-medium underline">
+            William.einald@primetechsolutions.se
           </a>
           .
         </div>
