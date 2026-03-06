@@ -44,7 +44,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         useTransparent
           ? 'bg-transparent'
-          : 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-100'
+          : 'bg-navy-800/95 backdrop-blur-sm shadow-sm border-b border-slate-700'
       }`}
     >
       <nav
@@ -68,7 +68,7 @@ export default function Navbar() {
             />
             <span
               className={`font-semibold text-lg leading-none transition-colors ${
-                useTransparent ? 'text-white' : 'text-slate-900'
+                useTransparent ? 'text-white' : 'text-white'
               }`}
             >
               Primetech Solutions
@@ -85,10 +85,10 @@ export default function Navbar() {
                   pathname === href
                     ? useTransparent
                       ? 'text-white font-semibold'
-                      : 'text-blue-600'
+                      : 'text-blue-400'
                     : useTransparent
                       ? 'text-white/75 hover:text-white'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      : 'text-slate-300 hover:text-white hover:bg-navy-700'
                 }`}
                 aria-current={pathname === href ? 'page' : undefined}
               >
@@ -109,7 +109,7 @@ export default function Navbar() {
             className={`lg:hidden p-2 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
               useTransparent
                 ? 'text-white hover:bg-white/10'
-                : 'text-slate-700 hover:bg-slate-100'
+                : 'text-slate-300 hover:bg-navy-700'
             }`}
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isOpen}
@@ -140,7 +140,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`lg:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-100 shadow-xl transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden absolute top-full left-0 right-0 bg-navy-800 border-b border-slate-700 shadow-xl transition-all duration-300 overflow-hidden ${
           isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
         aria-hidden={!isOpen}
@@ -153,15 +153,15 @@ export default function Navbar() {
               tabIndex={isOpen ? 0 : -1}
               className={`flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                 pathname === href
-                  ? 'bg-blue-50 text-blue-600'
-                  : 'text-slate-700 hover:bg-slate-50'
+                  ? 'bg-navy-700 text-blue-400'
+                  : 'text-slate-300 hover:bg-navy-700'
               }`}
               aria-current={pathname === href ? 'page' : undefined}
             >
               {label}
             </Link>
           ))}
-          <div className="pt-2 border-t border-slate-100">
+          <div className="pt-2 border-t border-slate-700">
             <Link
               href="/contact"
               tabIndex={isOpen ? 0 : -1}
