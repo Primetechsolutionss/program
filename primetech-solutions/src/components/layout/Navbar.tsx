@@ -59,7 +59,7 @@ export default function Navbar() {
             aria-label="Primetech Solutions — Home"
           >
             <Image
-              src="/Images/Logo.png"
+              src="/Images/Logo_transparent.png"
               alt="Primetech Solutions logo"
               width={160}
               height={48}
