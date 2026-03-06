@@ -10,6 +10,7 @@ const SERVICE_OPTIONS = [
   { value: 'cloud-backup', label: 'Cloud & Backup' },
   { value: 'security', label: 'Security' },
   { value: 'it-operations', label: 'IT Operations / vCIO' },
+  { value: 'ai-automation', label: 'AI & Automation Workflows' },
   { value: 'other', label: 'Other / Not sure yet' },
 ]
 

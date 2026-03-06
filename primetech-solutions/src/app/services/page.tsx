@@ -5,7 +5,7 @@ import FinalCTA from '@/components/sections/FinalCTA'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Explore Primetech Solutions IT services: Microsoft 365, Intune endpoint management, network & Wi-Fi, cloud backup, security, and IT operations / vCIO.',
+    'Explore Primetech Solutions IT services: Microsoft 365, Intune endpoint management, network & Wi-Fi, cloud backup, security, IT operations / vCIO, and AI & automation workflows.',
 }
 
 const services = [
@@ -111,6 +111,23 @@ const services = [
       'Incident response procedure and escalation matrix',
     ],
   },
+  {
+    id: 'ai-automation',
+    number: '07',
+    title: 'AI & Automation Workflows',
+    tagline: 'Eliminate repetitive work and surface smarter insights — using tools you already own.',
+    description:
+      'Most organisations already have access to powerful automation and AI capabilities through Microsoft 365 — but very few use them effectively. We identify the manual, time-consuming processes in your business and design automation workflows using Power Automate, Power Apps, and Microsoft Copilot. The result is less repetitive work, fewer errors, and staff who can focus on what actually requires human judgement.',
+    deliverables: [
+      'Process discovery workshop and automation opportunity report',
+      'Power Automate workflow design and implementation',
+      'Microsoft Copilot enablement and policy configuration',
+      'Power Apps solution for internal business processes',
+      'SharePoint and Teams workflow integration',
+      'AI-assisted document processing and approval flows',
+      'User training and adoption guide',
+    ],
+  },
 ]
 
 function ServiceSection({
@@ -211,7 +228,7 @@ export default function ServicesPage() {
             Our services
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-xl leading-relaxed">
-            Six focused service areas. Every engagement is structured, delivered by senior engineers,
+            Seven focused service areas. Every engagement is structured, delivered by senior engineers,
             and fully documented. No surprises.
           </p>
 
