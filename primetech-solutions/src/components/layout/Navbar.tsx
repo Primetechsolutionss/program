@@ -44,7 +44,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         useTransparent
           ? 'bg-transparent'
-          : 'bg-navy-800/95 backdrop-blur-sm shadow-sm border-b border-slate-700'
+          : 'bg-navy-800 shadow-sm border-b border-slate-700'
       }`}
     >
       <nav
