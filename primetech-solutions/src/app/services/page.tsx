@@ -125,24 +125,24 @@ function ServiceSection({
   return (
     <section
       id={id}
-      className={`py-16 lg:py-20 border-b border-slate-100 ${reverse ? 'bg-slate-50' : 'bg-white'}`}
+      className={`py-16 lg:py-20 border-b border-slate-700 ${reverse ? 'bg-navy-900' : 'bg-navy-800'}`}
       aria-labelledby={`service-${id}-heading`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Content */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-2">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-2">
               {number}
             </p>
             <h2
               id={`service-${id}-heading`}
-              className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight"
+              className="text-2xl lg:text-3xl font-bold text-white tracking-tight"
             >
               {title}
             </h2>
-            <p className="mt-2 text-base font-medium text-blue-600 italic">{tagline}</p>
-            <p className="mt-5 text-sm text-slate-600 leading-relaxed">{description}</p>
+            <p className="mt-2 text-base font-medium text-blue-400 italic">{tagline}</p>
+            <p className="mt-5 text-sm text-slate-300 leading-relaxed">{description}</p>
             <div className="mt-6">
               <Link
                 href="/contact"
@@ -168,8 +168,8 @@ function ServiceSection({
           </div>
 
           {/* Deliverables */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 lg:p-8">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
+          <div className="rounded-2xl border border-slate-700 bg-navy-700 p-6 lg:p-8">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
               Typical deliverables
             </p>
             <ul className="space-y-3" role="list">
@@ -187,7 +187,7 @@ function ServiceSection({
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-sm text-slate-700 leading-snug">{item}</span>
+                  <span className="text-sm text-slate-300 leading-snug">{item}</span>
                 </li>
               ))}
             </ul>

@@ -56,15 +56,15 @@ export default function Testimonials() {
         {testimonials.map(({ quote, name, role, company, initials }) => (
           <figure
             key={name}
-            className="flex flex-col p-6 lg:p-8 rounded-2xl border border-slate-200 bg-white hover:shadow-md hover:border-slate-300 transition-all duration-200"
+            className="flex flex-col p-6 lg:p-8 rounded-2xl border border-slate-700 bg-navy-700 hover:shadow-md hover:border-slate-500 transition-all duration-200"
           >
             <StarRating />
             <blockquote className="mt-5 flex-1">
-              <p className="text-sm text-slate-700 leading-relaxed italic">
+              <p className="text-sm text-slate-300 leading-relaxed italic">
                 &ldquo;{quote}&rdquo;
               </p>
             </blockquote>
-            <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-5">
+            <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-700 pt-5">
               <div
                 className="w-9 h-9 rounded-full bg-navy-800 flex items-center justify-center text-xs font-bold text-blue-400 shrink-0"
                 aria-hidden="true"
@@ -72,8 +72,8 @@ export default function Testimonials() {
                 {initials}
               </div>
               <div>
-                <p className="text-sm font-semibold text-slate-900">{name}</p>
-                <p className="text-xs text-slate-500">
+                <p className="text-sm font-semibold text-white">{name}</p>
+                <p className="text-xs text-slate-400">
                   {role} · {company}
                 </p>
               </div>

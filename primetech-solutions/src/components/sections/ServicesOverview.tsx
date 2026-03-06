@@ -97,11 +97,11 @@ export default function ServicesOverview() {
           <AnimateIn key={id} delay={index * 60}>
             <Link
               href={`/services#${id}`}
-              className="group flex flex-col h-full p-6 lg:p-7 rounded-2xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all duration-200 bg-white"
+              className="group flex flex-col h-full p-6 lg:p-7 rounded-2xl border border-slate-700 hover:border-blue-500 hover:shadow-md transition-all duration-200 bg-navy-700"
             >
-              <div className="w-11 h-11 rounded-xl bg-slate-50 group-hover:bg-blue-50 flex items-center justify-center mb-4 transition-colors shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-navy-800 group-hover:bg-navy-900 flex items-center justify-center mb-4 transition-colors shrink-0">
                 <svg
-                  className="w-5 h-5 text-slate-600 group-hover:text-blue-600 transition-colors"
+                  className="w-5 h-5 text-slate-300 group-hover:text-blue-400 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -111,8 +111,8 @@ export default function ServicesOverview() {
                   {icon}
                 </svg>
               </div>
-              <h3 className="text-base font-semibold text-slate-900 mb-2">{title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed flex-1">{description}</p>
+              <h3 className="text-base font-semibold text-white mb-2">{title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed flex-1">{description}</p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 group-hover:gap-2.5 transition-all">
                 Learn more
                 <svg
@@ -138,7 +138,7 @@ export default function ServicesOverview() {
       <div className="mt-10 text-center">
         <Link
           href="/services"
-          className="inline-flex items-center gap-2 px-6 py-3 border border-slate-200 text-sm font-medium text-slate-700 rounded-xl hover:border-slate-300 hover:bg-slate-50 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 border border-slate-600 text-sm font-medium text-slate-300 rounded-xl hover:border-slate-400 hover:bg-navy-700 transition-colors"
         >
           View full service details
           <svg

@@ -112,14 +112,14 @@ export default function AboutPage() {
       </div>
 
       {/* Company story */}
-      <section className="py-20 lg:py-28 bg-white" aria-labelledby="story-heading">
+      <section className="py-20 lg:py-28 bg-navy-800" aria-labelledby="story-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Full-width heading */}
           <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">
               Our background
             </p>
-            <h2 id="story-heading" className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            <h2 id="story-heading" className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
               Built by practitioners who know what good IT looks like
             </h2>
           </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-5 text-base text-slate-600 leading-relaxed">
+            <div className="space-y-5 text-base text-slate-300 leading-relaxed">
               <p>
                 Primetech Solutions was founded by IT engineers who spent years working inside
                 organisations — managing infrastructure, supporting end users, and navigating the
@@ -162,23 +162,23 @@ export default function AboutPage() {
       </section>
 
       {/* Operating principles */}
-      <section className="py-20 lg:py-28 bg-slate-50 border-y border-slate-100" aria-labelledby="principles-heading">
+      <section className="py-20 lg:py-28 bg-navy-900 border-y border-slate-700" aria-labelledby="principles-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">
               How we work
             </p>
-            <h2 id="principles-heading" className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            <h2 id="principles-heading" className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
               Three principles we do not compromise on
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {principles.map(({ icon, title, description }) => (
-              <div key={title} className="bg-white rounded-2xl border border-slate-200 p-7">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+              <div key={title} className="bg-navy-800 rounded-2xl border border-slate-700 p-7">
+                <div className="w-12 h-12 rounded-xl bg-navy-700 flex items-center justify-center mb-5">
                   <svg
-                    className="w-6 h-6 text-blue-600"
+                    className="w-6 h-6 text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -188,8 +188,8 @@ export default function AboutPage() {
                     {icon}
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -197,16 +197,16 @@ export default function AboutPage() {
       </section>
 
       {/* Engagement models */}
-      <section className="py-20 lg:py-28 bg-white" aria-labelledby="models-heading">
+      <section className="py-20 lg:py-28 bg-navy-800" aria-labelledby="models-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">
               Working together
             </p>
-            <h2 id="models-heading" className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+            <h2 id="models-heading" className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
               Engagement models
             </h2>
-            <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
               We adapt to how your organisation works — not the other way around. Choose the model
               that fits your situation, or combine them as your needs evolve.
             </p>
@@ -216,18 +216,18 @@ export default function AboutPage() {
             {engagementModels.map(({ title, badge, badgeColor, description, examples, pricing }) => (
               <div
                 key={title}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 hover:shadow-md hover:border-slate-300 transition-all duration-200"
+                className="flex flex-col rounded-2xl border border-slate-700 bg-navy-700 p-7 hover:shadow-md hover:border-slate-500 transition-all duration-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+                  <h3 className="text-lg font-semibold text-white">{title}</h3>
                   <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${badgeColor}`}>
                     {badge}
                   </span>
                 </div>
-                <p className="text-sm text-slate-500 leading-relaxed mb-5">{description}</p>
+                <p className="text-sm text-slate-400 leading-relaxed mb-5">{description}</p>
                 <ul className="space-y-2 mb-6 flex-1" role="list">
                   {examples.map((ex) => (
-                    <li key={ex} className="flex items-start gap-2 text-xs text-slate-600">
+                    <li key={ex} className="flex items-start gap-2 text-xs text-slate-300">
                       <svg
                         className="w-3.5 h-3.5 text-blue-500 shrink-0 mt-0.5"
                         fill="currentColor"
@@ -244,9 +244,9 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-4 border-t border-slate-100">
-                  <p className="text-xs text-slate-500">
-                    <span className="font-semibold text-slate-700">Pricing: </span>
+                <div className="pt-4 border-t border-slate-700">
+                  <p className="text-xs text-slate-400">
+                    <span className="font-semibold text-slate-200">Pricing: </span>
                     {pricing}
                   </p>
                 </div>
@@ -255,7 +255,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-sm text-slate-500 mb-5">
+            <p className="text-sm text-slate-400 mb-5">
               Not sure which model suits your situation? Start with the free consultation.
             </p>
             <Link

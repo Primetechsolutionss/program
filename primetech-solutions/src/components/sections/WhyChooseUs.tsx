@@ -59,18 +59,18 @@ export default function WhyChooseUs() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         {/* Left: heading */}
         <div className="lg:sticky lg:top-28">
-          <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-3">
             Our standard
           </p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
             Why organisations choose Primetech Solutions
           </h2>
-          <p className="mt-5 text-lg text-slate-600 leading-relaxed">
+          <p className="mt-5 text-lg text-slate-300 leading-relaxed">
             There is no shortage of IT providers. The difference lies in consistency, transparency,
             and what happens after the project closes.
           </p>
-          <div className="mt-8 p-5 rounded-2xl bg-blue-50 border border-blue-100">
-            <p className="text-sm text-slate-700 leading-relaxed italic">
+          <div className="mt-8 p-5 rounded-2xl bg-navy-700 border border-slate-700">
+            <p className="text-sm text-slate-300 leading-relaxed italic">
               &ldquo;We built Primetech Solutions to be the IT partner we wished existed when we
               were working inside organisations ourselves.&rdquo;
             </p>
@@ -85,12 +85,12 @@ export default function WhyChooseUs() {
           {reasons.map(({ title, description }) => (
             <li
               key={title}
-              className="flex items-start gap-4 p-5 rounded-2xl hover:bg-slate-50 transition-colors"
+              className="flex items-start gap-4 p-5 rounded-2xl hover:bg-navy-700 transition-colors"
             >
               <CheckIcon />
               <div>
-                <p className="text-sm font-semibold text-slate-900">{title}</p>
-                <p className="mt-1 text-sm text-slate-500 leading-relaxed">{description}</p>
+                <p className="text-sm font-semibold text-white">{title}</p>
+                <p className="mt-1 text-sm text-slate-400 leading-relaxed">{description}</p>
               </div>
             </li>
           ))}

@@ -90,18 +90,18 @@ export default function ContactPage() {
       </div>
 
       {/* Main contact section */}
-      <section className="py-20 lg:py-28 bg-white" aria-labelledby="contact-form-heading">
+      <section className="py-20 lg:py-28 bg-navy-800" aria-labelledby="contact-form-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left: form */}
             <div className="lg:col-span-3">
               <h2
                 id="contact-form-heading"
-                className="text-2xl font-bold text-slate-900 mb-2"
+                className="text-2xl font-bold text-white mb-2"
               >
                 Send us a message
               </h2>
-              <p className="text-sm text-slate-500 mb-8 leading-relaxed">
+              <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                 Fill in the form and a consultant will be in touch within one business day to
                 arrange your consultation.
               </p>
@@ -111,14 +111,14 @@ export default function ContactPage() {
             {/* Right: info */}
             <div className="lg:col-span-2 space-y-8">
               {/* Contact details */}
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 lg:p-8">
-                <h3 className="text-base font-semibold text-slate-900 mb-5">Contact details</h3>
+              <div className="rounded-2xl border border-slate-700 bg-navy-700 p-6 lg:p-8">
+                <h3 className="text-base font-semibold text-white mb-5">Contact details</h3>
                 <ul className="space-y-4" role="list">
                   {contactInfo.map(({ icon, label, value, href }) => (
                     <li key={label} className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-8 h-8 rounded-lg bg-navy-800 border border-slate-600 flex items-center justify-center shrink-0 mt-0.5">
                         <svg
-                          className="w-4 h-4 text-blue-600"
+                          className="w-4 h-4 text-blue-400"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -129,18 +129,18 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
                           {label}
                         </p>
                         {href ? (
                           <a
                             href={href}
-                            className="text-sm text-slate-800 hover:text-blue-600 transition-colors mt-0.5 block"
+                            className="text-sm text-slate-200 hover:text-blue-400 transition-colors mt-0.5 block"
                           >
                             {value}
                           </a>
                         ) : (
-                          <p className="text-sm text-slate-800 mt-0.5">{value}</p>
+                          <p className="text-sm text-slate-200 mt-0.5">{value}</p>
                         )}
                       </div>
                     </li>
@@ -149,8 +149,8 @@ export default function ContactPage() {
               </div>
 
               {/* What to expect */}
-              <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6 lg:p-8">
-                <h3 className="text-base font-semibold text-slate-900 mb-4">
+              <div className="rounded-2xl border border-blue-900 bg-navy-700 p-6 lg:p-8">
+                <h3 className="text-base font-semibold text-white mb-4">
                   What happens next
                 </h3>
                 <ol className="space-y-4" role="list">
@@ -163,11 +163,11 @@ export default function ContactPage() {
                       <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                         {i + 1}
                       </span>
-                      <p className="text-sm text-slate-700 leading-relaxed">{step}</p>
+                      <p className="text-sm text-slate-300 leading-relaxed">{step}</p>
                     </li>
                   ))}
                 </ol>
-                <p className="mt-5 text-xs text-slate-500">
+                <p className="mt-5 text-xs text-slate-400">
                   No commitment required. The consultation is free of charge.
                 </p>
               </div>

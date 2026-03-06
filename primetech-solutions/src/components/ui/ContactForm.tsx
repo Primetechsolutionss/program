@@ -67,9 +67,9 @@ function FieldError({ message }: { message?: string }) {
 }
 
 const inputBase =
-  'block w-full rounded-xl border px-4 py-3 text-sm text-slate-900 placeholder-slate-400 bg-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-const inputNormal = 'border-slate-200 hover:border-slate-300'
-const inputError = 'border-red-300 bg-red-50 focus:ring-red-400'
+  'block w-full rounded-xl border px-4 py-3 text-sm text-slate-100 placeholder-slate-500 bg-navy-900 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+const inputNormal = 'border-slate-600 hover:border-slate-500'
+const inputError = 'border-red-500 bg-red-950/30 focus:ring-red-400'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -127,10 +127,10 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="text-center py-12 px-6 bg-green-50 rounded-2xl border border-green-100">
-        <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+      <div className="text-center py-12 px-6 bg-navy-700 rounded-2xl border border-green-900">
+        <div className="w-14 h-14 bg-green-900/40 rounded-full flex items-center justify-center mx-auto mb-5">
           <svg
-            className="w-7 h-7 text-green-600"
+            className="w-7 h-7 text-green-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -144,8 +144,8 @@ export default function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">Message received</h3>
-        <p className="text-slate-600 text-sm leading-relaxed">
+        <h3 className="text-xl font-semibold text-white mb-2">Message received</h3>
+        <p className="text-slate-300 text-sm leading-relaxed">
           Thank you for reaching out. A consultant will contact you within one business day to
           arrange your free consultation.
         </p>
@@ -158,7 +158,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1.5">
             Full name <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <input
@@ -179,7 +179,7 @@ export default function ContactForm() {
 
         {/* Company */}
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-1.5">
             Company <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <input
@@ -199,7 +199,7 @@ export default function ContactForm() {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-1.5">
             Email address <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <input
@@ -219,7 +219,7 @@ export default function ContactForm() {
 
         {/* Phone */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-1.5">
             Phone{' '}
             <span className="text-slate-400 font-normal text-xs">(optional)</span>
           </label>
@@ -237,7 +237,7 @@ export default function ContactForm() {
 
         {/* Service */}
         <div className="sm:col-span-2">
-          <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-1.5">
             Service interest{' '}
             <span className="text-slate-400 font-normal text-xs">(optional)</span>
           </label>
@@ -258,7 +258,7 @@ export default function ContactForm() {
 
         {/* Message */}
         <div className="sm:col-span-2">
-          <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-1.5">
             Message <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <textarea
@@ -288,10 +288,10 @@ export default function ContactForm() {
               aria-required="true"
               aria-invalid={!!errors.consent}
             />
-            <span className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-800 transition-colors">
+            <span className="text-sm text-slate-300 leading-relaxed group-hover:text-slate-100 transition-colors">
               I agree to be contacted by Primetech Solutions regarding my request. We process your
               data in accordance with our{' '}
-              <a href="/privacy" className="text-blue-600 hover:underline">
+              <a href="/privacy" className="text-blue-400 hover:underline">
                 Privacy Policy
               </a>
               .<span className="text-red-500 ml-0.5" aria-hidden="true">*</span>
@@ -349,7 +349,7 @@ export default function ContactForm() {
             'Send message'
           )}
         </button>
-        <p className="mt-3 text-xs text-slate-500">
+        <p className="mt-3 text-xs text-slate-400">
           Fields marked <span className="text-red-500" aria-hidden="true">*</span> are required.
           We typically respond within one business day.
         </p>

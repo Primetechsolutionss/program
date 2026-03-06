@@ -24,7 +24,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <SectionWrapper className="bg-slate-50" id="how-it-works">
+    <SectionWrapper className="bg-navy-900" id="how-it-works">
       <SectionHeading
         label="Free consultation"
         title="How the free consultation works"
@@ -34,18 +34,18 @@ export default function HowItWorks() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 relative">
         {/* Connector line (desktop) */}
         <div
-          className="hidden md:block absolute top-8 left-[calc(16.67%+16px)] right-[calc(16.67%+16px)] h-px bg-slate-200"
+          className="hidden md:block absolute top-8 left-[calc(16.67%+16px)] right-[calc(16.67%+16px)] h-px bg-slate-700"
           aria-hidden="true"
         />
 
         {steps.map(({ number, title, description }, i) => (
           <div key={number} className="relative flex flex-col items-center text-center">
             {/* Step number */}
-            <div className="relative z-10 w-16 h-16 rounded-2xl bg-white border-2 border-blue-100 shadow-sm flex items-center justify-center mb-6">
-              <span className="text-lg font-bold text-blue-600">{number}</span>
+            <div className="relative z-10 w-16 h-16 rounded-2xl bg-navy-800 border-2 border-blue-900 shadow-sm flex items-center justify-center mb-6">
+              <span className="text-lg font-bold text-blue-400">{number}</span>
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 mb-3">{title}</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">{description}</p>
+            <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
+            <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
 
             {/* Mobile connector */}
             {i < steps.length - 1 && (

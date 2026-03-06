@@ -37,7 +37,7 @@ export function SectionHeading({
   description,
   align = 'center',
   className = '',
-  light = false,
+  light = true,
 }: SectionHeadingProps) {
   return (
     <div

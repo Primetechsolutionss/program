@@ -57,7 +57,7 @@ const industries = [
 
 export default function Industries() {
   return (
-    <SectionWrapper className="bg-slate-50" id="industries">
+    <SectionWrapper className="bg-navy-900" id="industries">
       <SectionHeading
         label="Industries served"
         title="Built for businesses with real operational demands"
@@ -68,7 +68,7 @@ export default function Industries() {
         {industries.map(({ icon, title, description, highlights }) => (
           <div
             key={title}
-            className="p-6 lg:p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all duration-200"
+            className="p-6 lg:p-8 rounded-2xl bg-navy-800 border border-slate-700 hover:border-slate-500 hover:shadow-sm transition-all duration-200"
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="w-11 h-11 rounded-xl bg-navy-800 flex items-center justify-center shrink-0">
@@ -83,12 +83,12 @@ export default function Industries() {
                   {icon}
                 </svg>
               </div>
-              <h3 className="text-base font-semibold text-slate-900 leading-snug pt-1">{title}</h3>
+              <h3 className="text-base font-semibold text-white leading-snug pt-1">{title}</h3>
             </div>
-            <p className="text-sm text-slate-500 leading-relaxed mb-4">{description}</p>
+            <p className="text-sm text-slate-400 leading-relaxed mb-4">{description}</p>
             <ul className="space-y-1.5" role="list">
               {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-xs text-slate-600">
+                <li key={item} className="flex items-center gap-2 text-xs text-slate-300">
                   <svg
                     className="w-3.5 h-3.5 text-blue-500 shrink-0"
                     fill="currentColor"

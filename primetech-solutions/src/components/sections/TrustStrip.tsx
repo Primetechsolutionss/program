@@ -61,7 +61,7 @@ const trustItems = [
 export default function TrustStrip() {
   return (
     <section
-      className="bg-slate-50 border-y border-slate-200 py-14 lg:py-16"
+      className="bg-navy-900 border-y border-slate-700 py-14 lg:py-16"
       aria-label="Why clients trust Primetech Solutions"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,9 +71,9 @@ export default function TrustStrip() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {trustItems.map(({ icon, title, description }) => (
             <div key={title} className="flex flex-col items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-navy-700 flex items-center justify-center shrink-0">
                 <svg
-                  className="w-5 h-5 text-blue-600"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -84,8 +84,8 @@ export default function TrustStrip() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-semibold text-slate-900">{title}</p>
-                <p className="mt-1 text-xs text-slate-500 leading-relaxed">{description}</p>
+                <p className="text-sm font-semibold text-white">{title}</p>
+                <p className="mt-1 text-xs text-slate-400 leading-relaxed">{description}</p>
               </div>
             </div>
           ))}
