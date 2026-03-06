@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -57,16 +58,14 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-lg"
             aria-label="Primetech Solutions — Home"
           >
-            <span className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm group-hover:bg-blue-700 transition-colors shrink-0">
-              P
-            </span>
-            <span
-              className={`font-semibold text-lg leading-none transition-colors ${
-                useTransparent ? 'text-white' : 'text-slate-900'
-              }`}
-            >
-              Primetech Solutions
-            </span>
+            <Image
+              src="/Images/Logo.png"
+              alt="Primetech Solutions"
+              width={160}
+              height={48}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop navigation */}
