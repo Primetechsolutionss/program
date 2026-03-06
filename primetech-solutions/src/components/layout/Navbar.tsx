@@ -60,12 +60,19 @@ export default function Navbar() {
           >
             <Image
               src="/Images/Logo.png"
-              alt="Primetech Solutions"
+              alt="Primetech Solutions logo"
               width={160}
               height={48}
               className="h-10 w-auto object-contain"
               priority
             />
+            <span
+              className={`font-semibold text-lg leading-none transition-colors ${
+                useTransparent ? 'text-white' : 'text-slate-900'
+              }`}
+            >
+              Primetech Solutions
+            </span>
           </Link>
 
           {/* Desktop navigation */}
