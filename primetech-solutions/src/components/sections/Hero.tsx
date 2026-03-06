@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="animate-fade-up animation-delay-300 mt-10 flex flex-col sm:flex-row items-start gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-800 text-base"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-400 hover:to-indigo-500 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-800 text-base"
             >
               Book free consultation
               <svg

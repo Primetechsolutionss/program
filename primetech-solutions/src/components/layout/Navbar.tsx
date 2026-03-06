@@ -97,7 +97,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="ml-3 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              className="ml-3 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm font-medium rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
             >
               Free consultation
             </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               tabIndex={isOpen ? 0 : -1}
-              className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
+              className="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm font-medium rounded-xl hover:from-blue-400 hover:to-indigo-500 transition-all"
             >
               Book free consultation
             </Link>
