@@ -22,15 +22,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 lg:pt-36 lg:pb-32">
         <div className="max-w-3xl">
-          {/* Label */}
-          <p className="animate-fade-in inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-widest uppercase">
-            <span
-              className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"
-              aria-hidden="true"
-            />
-            IT Consultancy
-          </p>
-
           {/* Headline */}
           <h1 className="animate-fade-up animation-delay-100 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
             IT infrastructure that works —
