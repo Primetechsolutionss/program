@@ -15,7 +15,7 @@ const services = [
     title: 'O365 + Security',
     tagline: 'Full Microsoft 365 deployment, administration, and cloud architecture — combined with comprehensive security posture management, endpoint protection, and compliance hardening.',
     description:
-      'A poorly configured Microsoft 365 tenant is one of the most common sources of security incidents in small and mid-sized organisations. We handle the full deployment and ongoing administration of your Microsoft 365 environment — combined with a security layer that covers endpoint protection, identity threat management, and compliance. Everything is configured to recognised baselines and fully documented.',
+      'Lead IT operations and Microsoft 365 governance across 5+ organizations in Sweden and Europe — with security baselines, compliance frameworks, and lifecycle control built in from day one.',
     deliverables: [
       'Microsoft 365 tenant deployment and administration',
       'Entra ID identity and access management setup',
@@ -32,7 +32,7 @@ const services = [
     title: 'Managed IT',
     tagline: 'Proactive monitoring, helpdesk support, and end-to-end management of your entire IT environment — so your team stays focused on business, not infrastructure.',
     description:
-      'For organisations that need a reliable IT partner without hiring an internal IT manager, our Managed IT service covers everything. We proactively monitor your environment, respond to incidents, manage patching, and provide SLA-backed helpdesk support — all for a fixed monthly fee. You get the coverage of a full IT department at a fraction of the cost.',
+      'From hands-on helpdesk to multi-site escalation point — I\'ve managed IT environments for 200+ personnel across 8+ project offices, standardizing infrastructure, documentation, and operational procedures.',
     deliverables: [
       '24/7 environment monitoring and alerting',
       'SLA-backed helpdesk (remote and on-site support)',
@@ -49,7 +49,7 @@ const services = [
     title: 'IT Consultancy',
     tagline: 'From greenfield deployments to legacy modernisation — we plan, architect, and lead complex IT projects from kickoff to go-live with senior-level oversight throughout.',
     description:
-      'When your organisation faces a significant IT project — a cloud migration, an infrastructure overhaul, or a platform consolidation — the quality of the planning and architecture determines the outcome. We provide senior-level consultancy throughout: scoping, design, vendor selection, project management, and a structured handover that leaves your team fully capable of maintaining what we build.',
+      'Mobilized and demobilized 10+ site offices on Västlänken mega-project (€270M+) — from greenfield setup to structured handover, with full compliance documentation deliveries throughout.',
     deliverables: [
       'Project scoping, requirements gathering, and architecture design',
       'Greenfield deployments and legacy modernisation',
@@ -66,7 +66,7 @@ const services = [
     title: 'Data Management',
     tagline: 'Protecting and structuring your most critical asset — from backup & recovery strategies and secure storage to seamless data migrations, GDPR compliance, and DCC consultancy.',
     description:
-      'Data is the foundation of every organisation — and most do not protect it adequately. We design and implement backup strategies with tested recovery procedures, manage secure data migrations, and advise on storage architecture and archiving. We also provide GDPR compliance assessment and DCC (Data Centre Consultancy) services for organisations managing on-premise or hybrid infrastructure.',
+      'Implemented backup strategies, compliance frameworks, and lifecycle control across multi-tenant Microsoft 365 environments — covering GDPR, data integrity, and structured handovers.',
     deliverables: [
       'Backup strategy design and implementation',
       'Tested disaster recovery procedures (RTO/RPO defined)',
@@ -83,7 +83,7 @@ const services = [
     title: 'AI + Workflows',
     tagline: 'Identify bottlenecks and implement intelligent automation — from AI-assisted process design to end-to-end workflow orchestration that reduces overhead and scales with your business.',
     description:
-      'Most organisations have significant time lost to manual, repetitive processes — approvals, data entry, reporting, and handoffs that could be automated. We identify those bottlenecks and implement intelligent workflows using Make, Power Automate, and AI integration tools. The result is less overhead, fewer errors, and a business that scales without proportionally growing its administrative burden.',
+      'Building custom AI and automation solutions on request — identifying manual overhead and replacing it with intelligent workflows tailored to each client\'s operations.',
     deliverables: [
       'Process discovery workshop and automation opportunity report',
       'Make (Integromat) and Power Automate workflow implementation',
