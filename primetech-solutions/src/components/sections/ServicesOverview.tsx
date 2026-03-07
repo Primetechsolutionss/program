@@ -141,18 +141,17 @@ export default function ServicesOverview() {
             <AnimateIn delay={index * 120}>
               <Link
                 href={`/services#${id}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-lg transition-all duration-200 bg-navy-700"
+                className="group block overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-lg transition-all duration-200"
               >
-                <div className="w-full h-28 relative overflow-hidden">
+                <div className="w-full h-36 relative overflow-hidden">
                   <Image
                     src={image}
                     alt={title}
                     fill
                     className="object-cover"
                   />
-                </div>
-                <div className="px-4 py-3">
-                  <h3 className="text-sm font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <h3 className="absolute bottom-3 left-3 right-3 text-sm font-semibold text-white group-hover:text-fuchsia-300 transition-colors leading-snug">{title}</h3>
                 </div>
               </Link>
             </AnimateIn>
@@ -166,18 +165,17 @@ export default function ServicesOverview() {
           <AnimateIn key={id} delay={index * 60}>
             <Link
               href={`/services#${id}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-md transition-all duration-200 bg-navy-700"
+              className="group block overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-md transition-all duration-200"
             >
-              <div className="w-full h-36 relative overflow-hidden">
+              <div className="w-full h-44 relative overflow-hidden">
                 <Image
                   src={image}
                   alt={title}
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="px-5 py-4">
-                <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <h3 className="absolute bottom-4 left-4 right-4 text-base font-semibold text-white group-hover:text-fuchsia-300 transition-colors leading-snug">{title}</h3>
               </div>
             </Link>
           </AnimateIn>
