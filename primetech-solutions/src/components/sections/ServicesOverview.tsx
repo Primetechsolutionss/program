@@ -120,7 +120,7 @@ export default function ServicesOverview() {
         </div>
 
         {/* Service cards */}
-        {services.map(({ id, icon, title, description, pos }, index) => (
+        {services.map(({ id, title, pos }, index) => (
           <div
             key={id}
             style={{
@@ -128,41 +128,22 @@ export default function ServicesOverview() {
               left: pos.left,
               top: pos.top,
               transform: 'translate(-50%, -50%)',
-              width: '210px',
+              width: '200px',
               zIndex: 20,
             }}
           >
             <AnimateIn delay={index * 120}>
               <Link
                 href={`/services#${id}`}
-                className="group flex flex-col p-5 rounded-2xl border border-slate-700 hover:border-blue-500 hover:shadow-lg transition-all duration-200 bg-navy-700"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-lg transition-all duration-200 bg-navy-700"
               >
-                <div className="w-10 h-10 rounded-xl bg-navy-800 group-hover:bg-navy-900 flex items-center justify-center mb-3 transition-colors shrink-0">
-                  <svg
-                    className="w-5 h-5 text-slate-300 group-hover:text-blue-400 transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.75}
-                    aria-hidden="true"
-                  >
-                    {icon}
-                  </svg>
+                {/* Image placeholder — replace with <Image> when ready */}
+                <div className="w-full h-28 bg-navy-800 border-b border-slate-700 flex items-center justify-center">
+                  <span className="text-xs text-slate-600">image</span>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1.5">{title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{description}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:gap-2 transition-all">
-                  Learn more
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
+                <div className="px-4 py-3">
+                  <h3 className="text-sm font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
+                </div>
               </Link>
             </AnimateIn>
           </div>
@@ -171,38 +152,19 @@ export default function ServicesOverview() {
 
       {/* Mobile: standard grid */}
       <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {services.map(({ id, icon, title, description }, index) => (
+        {services.map(({ id, title }, index) => (
           <AnimateIn key={id} delay={index * 60}>
             <Link
               href={`/services#${id}`}
-              className="group flex flex-col h-full p-6 lg:p-7 rounded-2xl border border-slate-700 hover:border-blue-500 hover:shadow-md transition-all duration-200 bg-navy-700"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-md transition-all duration-200 bg-navy-700"
             >
-              <div className="w-11 h-11 rounded-xl bg-navy-800 group-hover:bg-navy-900 flex items-center justify-center mb-4 transition-colors shrink-0">
-                <svg
-                  className="w-5 h-5 text-slate-300 group-hover:text-blue-400 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.75}
-                  aria-hidden="true"
-                >
-                  {icon}
-                </svg>
+              {/* Image placeholder — replace with <Image> when ready */}
+              <div className="w-full h-36 bg-navy-800 border-b border-slate-700 flex items-center justify-center">
+                <span className="text-xs text-slate-600">image</span>
               </div>
-              <h3 className="text-base font-semibold text-white mb-2">{title}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed flex-1">{description}</p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:gap-2.5 transition-all">
-                Learn more
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </span>
+              <div className="px-5 py-4">
+                <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
+              </div>
             </Link>
           </AnimateIn>
         ))}
