@@ -4,13 +4,11 @@ import { useState } from 'react'
 
 const SERVICE_OPTIONS = [
   { value: '', label: 'Select a service (optional)' },
-  { value: 'microsoft-365', label: 'Microsoft 365 & Entra ID' },
-  { value: 'endpoint-management', label: 'Endpoint Management (Intune)' },
-  { value: 'network-wifi', label: 'Network & Wi-Fi' },
-  { value: 'cloud-backup', label: 'Cloud & Backup' },
-  { value: 'security', label: 'Security' },
-  { value: 'it-operations', label: 'IT Operations / vCIO' },
-  { value: 'ai-automation', label: 'AI & Automation Workflows' },
+  { value: 'o365-security', label: 'O365 + Security' },
+  { value: 'managed-it', label: 'Managed IT' },
+  { value: 'it-consultancy', label: 'IT Consultancy' },
+  { value: 'data-management', label: 'Data Management' },
+  { value: 'ai-workflows', label: 'AI + Workflows' },
   { value: 'other', label: 'Other / Not sure yet' },
 ]
 

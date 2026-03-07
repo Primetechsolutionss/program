@@ -4,59 +4,7 @@ import { AnimateIn } from '@/components/ui/AnimateIn'
 
 const services = [
   {
-    id: 'microsoft-365',
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3"
-      />
-    ),
-    title: 'Microsoft 365 & Entra ID',
-    description:
-      'Tenant configuration, identity governance, licensing optimisation, and secure mail flow for your entire organisation.',
-  },
-  {
-    id: 'endpoint-management',
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3"
-      />
-    ),
-    title: 'Endpoint Management',
-    description:
-      'Device compliance, policy enforcement, and zero-touch onboarding via Microsoft Intune and Windows Autopilot.',
-  },
-  {
-    id: 'network-wifi',
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z"
-      />
-    ),
-    title: 'Network & Wi-Fi',
-    description:
-      'Network segmentation, VLAN design, Wi-Fi site surveys, and firewall configuration for reliable, secure connectivity.',
-  },
-  {
-    id: 'cloud-backup',
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"
-      />
-    ),
-    title: 'Cloud & Backup',
-    description:
-      'Microsoft 365 data protection, Azure-based disaster recovery, retention policy management, and tested recovery procedures.',
-  },
-  {
-    id: 'security',
+    id: 'o365-security',
     icon: (
       <path
         strokeLinecap="round"
@@ -64,25 +12,51 @@ const services = [
         d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
       />
     ),
-    title: 'Security',
+    title: 'O365 + Security',
     description:
-      'MFA enforcement, Conditional Access policies, security baseline implementation, and identity threat protection.',
+      'Full Microsoft 365 deployment and administration combined with Defender, Conditional Access, and compliance hardening.',
   },
   {
-    id: 'it-operations',
+    id: 'managed-it',
     icon: (
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
+        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3"
       />
     ),
-    title: 'IT Operations / vCIO',
+    title: 'Managed IT',
     description:
-      'IT roadmaps, vendor management, budget planning, and quarterly business reviews — strategic oversight without the overhead.',
+      '24/7 monitoring, SLA-backed helpdesk, and proactive patch management — end-to-end IT management for a fixed monthly fee.',
   },
   {
-    id: 'ai-automation',
+    id: 'it-consultancy',
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
+      />
+    ),
+    title: 'IT Consultancy',
+    description:
+      'Senior-led project management, architecture, and migrations — from greenfield deployments to legacy modernisation.',
+  },
+  {
+    id: 'data-management',
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+      />
+    ),
+    title: 'Data Management',
+    description:
+      'Backup & recovery, secure data migrations, GDPR compliance, storage architecture, and DCC consultancy.',
+  },
+  {
+    id: 'ai-workflows',
     icon: (
       <path
         strokeLinecap="round"
@@ -90,9 +64,9 @@ const services = [
         d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"
       />
     ),
-    title: 'AI & Automation Workflows',
+    title: 'AI + Workflows',
     description:
-      'Power Automate, Power Apps, and Microsoft Copilot — turning repetitive manual processes into automated, intelligent workflows.',
+      'Make, Power Automate, and AI integration — turning bottlenecks into intelligent, scalable automated workflows.',
   },
 ]
 
@@ -101,7 +75,7 @@ export default function ServicesOverview() {
     <SectionWrapper id="services-overview">
       <SectionHeading
         label="What we do"
-        title="Seven services. One consistent standard."
+        title="Five services. One consistent standard."
         description="Every engagement is structured, documented, and delivered by senior engineers. No junior staff, no delegation to offshore teams."
       />
 

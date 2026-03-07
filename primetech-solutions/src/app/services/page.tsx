@@ -5,127 +5,93 @@ import FinalCTA from '@/components/sections/FinalCTA'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Explore Primetech Solutions IT services: Microsoft 365, Intune endpoint management, network & Wi-Fi, cloud backup, security, IT operations / vCIO, and AI & automation workflows.',
+    'Explore Primetech Solutions IT services: O365 & Security, Managed IT, IT Consultancy, Data Management, and AI & Automation Workflows.',
 }
 
 const services = [
   {
-    id: 'microsoft-365',
+    id: 'o365-security',
     number: '01',
-    title: 'Microsoft 365 & Entra ID',
-    tagline: 'Identity, productivity, and governance — properly configured from day one.',
+    title: 'O365 + Security',
+    tagline: 'Full Microsoft 365 deployment, administration, and cloud architecture — combined with comprehensive security posture management, endpoint protection, and compliance hardening.',
     description:
-      'A poorly configured Microsoft 365 tenant is one of the most common sources of security incidents and operational friction in small and mid-sized organisations. We design and implement tenant configurations that are secure, scalable, and compliant — and we document everything so your team understands exactly what has been set up and why.',
+      'A poorly configured Microsoft 365 tenant is one of the most common sources of security incidents in small and mid-sized organisations. We handle the full deployment and ongoing administration of your Microsoft 365 environment — combined with a security layer that covers endpoint protection, identity threat management, and compliance. Everything is configured to recognised baselines and fully documented.',
     deliverables: [
-      'Tenant audit report with prioritised findings',
-      'Domain, DNS, and mail flow configuration',
+      'Microsoft 365 tenant deployment and administration',
       'Entra ID identity and access management setup',
-      'User and group lifecycle management workflows',
-      'Licensing review and optimisation recommendations',
-      'Security and compliance policy configuration (DLP, retention, sensitivity labels)',
-      'Governance documentation and admin runbook',
-    ],
-  },
-  {
-    id: 'endpoint-management',
-    number: '02',
-    title: 'Endpoint Management (Intune)',
-    tagline: 'Every device compliant, every user productive — regardless of location.',
-    description:
-      'Modern workforces require modern device management. Microsoft Intune gives you central control over Windows, macOS, iOS, and Android devices — enforcing compliance policies, deploying applications, and enabling zero-touch onboarding via Windows Autopilot. We design the policies, enrol your devices, and build the documentation that keeps your environment manageable long term.',
-    deliverables: [
-      'Intune environment design and initial configuration',
-      'Device compliance and configuration profiles',
-      'Windows Autopilot deployment profile setup',
-      'Application deployment (required and available)',
-      'Conditional Access integration with Entra ID',
-      'Enrolment guide for end users and IT administrators',
-      'Device compliance dashboard and reporting setup',
-    ],
-  },
-  {
-    id: 'network-wifi',
-    number: '03',
-    title: 'Network & Wi-Fi',
-    tagline: 'Reliable, segmented, and documented — the foundation everything else depends on.',
-    description:
-      'A well-designed network is invisible to end users and invaluable to IT teams. We design, configure, and document network infrastructure that is appropriately segmented, resilient, and manageable. Whether you need a single-site office network or a multi-site SD-WAN architecture, we approach every engagement with the same rigour: no ad-hoc configurations, no undocumented exceptions.',
-    deliverables: [
-      'Network design documentation and VLAN schema',
-      'Firewall configuration and rule set review',
-      'Wi-Fi site survey and access point placement plan',
-      'Switch and router configuration (Ubiquiti, Cisco, Meraki)',
-      'Guest network and BYOD segmentation',
-      'VPN and remote access configuration',
-      'Network diagram (logical and physical)',
-    ],
-  },
-  {
-    id: 'cloud-backup',
-    number: '04',
-    title: 'Cloud & Backup',
-    tagline: 'Your data is protected, recoverable, and compliant with retention requirements.',
-    description:
-      'Microsoft 365 is not a backup solution — Microsoft states this explicitly. Email, SharePoint, Teams, and OneDrive data requires a dedicated backup layer. We design and implement backup strategies that cover your critical data, define clear recovery objectives, and verify that recovery actually works before you need it.',
-    deliverables: [
-      'Backup scope assessment and policy design',
-      'Microsoft 365 backup implementation (Exchange, SharePoint, Teams, OneDrive)',
-      'Azure-based backup and disaster recovery configuration',
-      'Retention policy configuration aligned with regulatory requirements',
-      'RTO/RPO assessment and documentation',
-      'Tested recovery procedure and recovery report',
-      'Backup monitoring and alerting setup',
-    ],
-  },
-  {
-    id: 'security',
-    number: '05',
-    title: 'Security',
-    tagline: 'A pragmatic, baseline-driven approach — built around your actual risk profile.',
-    description:
-      'Effective IT security for a 50-person organisation looks very different from enterprise security programmes. We apply Microsoft and CIS security baselines pragmatically — prioritising the controls that address the highest-probability threats for your organisation, without creating unnecessary complexity or user friction. MFA, Conditional Access, and identity protection are the foundation; we build from there.',
-    deliverables: [
-      'Security assessment report with risk prioritisation',
-      'MFA enforcement and Conditional Access policy design',
-      'Microsoft Secure Score baseline improvement plan',
+      'Microsoft Defender for Business configuration',
+      'Conditional Access policy design and enforcement',
       'CIS / Microsoft security baseline implementation',
-      'Entra ID Identity Protection configuration',
-      'Security hardening checklist (endpoints, cloud, network)',
-      'Monitoring and alerting setup (Defender, Sentinel basics)',
+      'DLP, retention, and sensitivity label policies',
+      'Secure Score improvement plan and monitoring',
     ],
   },
   {
-    id: 'it-operations',
-    number: '06',
-    title: 'IT Operations / vCIO',
-    tagline: 'Strategic IT oversight — without the cost of a full-time IT director.',
+    id: 'managed-it',
+    number: '02',
+    title: 'Managed IT',
+    tagline: 'Proactive monitoring, helpdesk support, and end-to-end management of your entire IT environment — so your team stays focused on business, not infrastructure.',
     description:
-      'Growing organisations reach a point where ad-hoc IT decisions become a liability. The vCIO engagement provides structured IT leadership: quarterly reviews, documented roadmaps, vendor relationship management, and budget planning. We become your IT strategic partner — representing your interests in vendor negotiations and ensuring your IT investments align with your business direction.',
+      'For organisations that need a reliable IT partner without hiring an internal IT manager, our Managed IT service covers everything. We proactively monitor your environment, respond to incidents, manage patching, and provide SLA-backed helpdesk support — all for a fixed monthly fee. You get the coverage of a full IT department at a fraction of the cost.',
     deliverables: [
-      '12-month IT roadmap and priority matrix',
-      'IT budget planning template and annual review',
-      'Vendor register and contract management overview',
-      'Quarterly IT business review (written summary + meeting)',
-      'Technology lifecycle management (hardware and software)',
-      'IT documentation baseline (knowledge base structure)',
-      'Incident response procedure and escalation matrix',
+      '24/7 environment monitoring and alerting',
+      'SLA-backed helpdesk (remote and on-site support)',
+      'Patch management for operating systems and applications',
+      'Proactive incident detection and resolution',
+      'Monthly IT health report and review',
+      'Vendor and licence management',
+      'Onboarding and offboarding workflow management',
     ],
   },
   {
-    id: 'ai-automation',
-    number: '07',
-    title: 'AI & Automation Workflows',
-    tagline: 'Eliminate repetitive work and surface smarter insights — using tools you already own.',
+    id: 'it-consultancy',
+    number: '03',
+    title: 'IT Consultancy',
+    tagline: 'From greenfield deployments to legacy modernisation — we plan, architect, and lead complex IT projects from kickoff to go-live with senior-level oversight throughout.',
     description:
-      'Most organisations already have access to powerful automation and AI capabilities through Microsoft 365 — but very few use them effectively. We identify the manual, time-consuming processes in your business and design automation workflows using Power Automate, Power Apps, and Microsoft Copilot. The result is less repetitive work, fewer errors, and staff who can focus on what actually requires human judgement.',
+      'When your organisation faces a significant IT project — a cloud migration, an infrastructure overhaul, or a platform consolidation — the quality of the planning and architecture determines the outcome. We provide senior-level consultancy throughout: scoping, design, vendor selection, project management, and a structured handover that leaves your team fully capable of maintaining what we build.',
+    deliverables: [
+      'Project scoping, requirements gathering, and architecture design',
+      'Greenfield deployments and legacy modernisation',
+      'Infrastructure and platform migrations',
+      'Vendor evaluation and procurement support',
+      'Senior-led project management and stakeholder reporting',
+      'Go-live support and post-project stabilisation',
+      'Knowledge transfer and full project documentation',
+    ],
+  },
+  {
+    id: 'data-management',
+    number: '04',
+    title: 'Data Management',
+    tagline: 'Protecting and structuring your most critical asset — from backup & recovery strategies and secure storage to seamless data migrations, GDPR compliance, and DCC consultancy.',
+    description:
+      'Data is the foundation of every organisation — and most do not protect it adequately. We design and implement backup strategies with tested recovery procedures, manage secure data migrations, and advise on storage architecture and archiving. We also provide GDPR compliance assessment and DCC (Data Centre Consultancy) services for organisations managing on-premise or hybrid infrastructure.',
+    deliverables: [
+      'Backup strategy design and implementation',
+      'Tested disaster recovery procedures (RTO/RPO defined)',
+      'Secure data migration planning and execution',
+      'GDPR compliance assessment and remediation',
+      'Storage architecture and archiving policy design',
+      'DCC (Data Centre Consultancy) advisory services',
+      'Retention policy configuration and audit trail setup',
+    ],
+  },
+  {
+    id: 'ai-workflows',
+    number: '05',
+    title: 'AI + Workflows',
+    tagline: 'Identify bottlenecks and implement intelligent automation — from AI-assisted process design to end-to-end workflow orchestration that reduces overhead and scales with your business.',
+    description:
+      'Most organisations have significant time lost to manual, repetitive processes — approvals, data entry, reporting, and handoffs that could be automated. We identify those bottlenecks and implement intelligent workflows using Make, Power Automate, and AI integration tools. The result is less overhead, fewer errors, and a business that scales without proportionally growing its administrative burden.',
     deliverables: [
       'Process discovery workshop and automation opportunity report',
-      'Power Automate workflow design and implementation',
-      'Microsoft Copilot enablement and policy configuration',
-      'Power Apps solution for internal business processes',
-      'SharePoint and Teams workflow integration',
-      'AI-assisted document processing and approval flows',
-      'User training and adoption guide',
+      'Make (Integromat) and Power Automate workflow implementation',
+      'AI integration design and deployment',
+      'End-to-end workflow orchestration across platforms',
+      'Bottleneck analysis and optimisation recommendations',
+      'User training and adoption programme',
+      'Ongoing workflow monitoring and iteration support',
     ],
   },
 ]
@@ -228,7 +194,7 @@ export default function ServicesPage() {
             Our services
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-xl leading-relaxed">
-            Seven focused service areas. Every engagement is structured, delivered by senior engineers,
+            Five focused service areas. Every engagement is structured, delivered by senior engineers,
             and fully documented. No surprises.
           </p>
 
