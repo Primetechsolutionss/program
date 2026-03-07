@@ -113,7 +113,7 @@ export default function ServicesOverview() {
         </svg>
 
         {/* Center circle */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center z-10 shadow-xl shadow-blue-900/50">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-gradient-to-br from-cyan-400 via-violet-500 to-fuchsia-500 flex items-center justify-center z-10 shadow-xl shadow-fuchsia-900/40">
           <p className="text-white font-bold text-center leading-relaxed text-base tracking-wide">
             Solutions<br />by<br />Primetech
           </p>
