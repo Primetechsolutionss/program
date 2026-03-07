@@ -15,6 +15,8 @@ const services = [
     title: 'O365 + Security',
     description:
       'Full Microsoft 365 deployment and administration combined with Defender, Conditional Access, and compliance hardening.',
+    pos: { left: '50%', top: '12%' },
+    line: [50, 12] as [number, number],
   },
   {
     id: 'managed-it',
@@ -28,6 +30,8 @@ const services = [
     title: 'Managed IT',
     description:
       '24/7 monitoring, SLA-backed helpdesk, and proactive patch management — end-to-end IT management for a fixed monthly fee.',
+    pos: { left: '86%', top: '38%' },
+    line: [86, 38] as [number, number],
   },
   {
     id: 'it-consultancy',
@@ -41,6 +45,8 @@ const services = [
     title: 'IT Consultancy',
     description:
       'Senior-led project management, architecture, and migrations — from greenfield deployments to legacy modernisation.',
+    pos: { left: '72%', top: '81%' },
+    line: [72, 81] as [number, number],
   },
   {
     id: 'data-management',
@@ -54,6 +60,8 @@ const services = [
     title: 'Data Management',
     description:
       'Backup & recovery, secure data migrations, GDPR compliance, storage architecture, and DCC consultancy.',
+    pos: { left: '28%', top: '81%' },
+    line: [28, 81] as [number, number],
   },
   {
     id: 'ai-workflows',
@@ -67,6 +75,8 @@ const services = [
     title: 'AI + Workflows',
     description:
       'Make, Power Automate, and AI integration — turning bottlenecks into intelligent, scalable automated workflows.',
+    pos: { left: '14%', top: '38%' },
+    line: [14, 38] as [number, number],
   },
 ]
 
@@ -79,7 +89,88 @@ export default function ServicesOverview() {
         description="Every engagement is structured, documented, and delivered by senior engineers. No junior staff, no delegation to offshore teams."
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+      {/* Desktop: circular / pentagon layout */}
+      <div className="relative hidden lg:block" style={{ height: '700px' }}>
+        {/* SVG connecting lines */}
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          {services.map(({ id, line }) => (
+            <line
+              key={id}
+              x1="50"
+              y1="50"
+              x2={line[0]}
+              y2={line[1]}
+              stroke="#334155"
+              strokeWidth="0.25"
+              strokeDasharray="1.2 0.8"
+            />
+          ))}
+        </svg>
+
+        {/* Center circle */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center z-10 shadow-xl shadow-blue-900/50">
+          <p className="text-white font-bold text-center leading-relaxed text-base tracking-wide">
+            Solutions<br />by<br />Primetech
+          </p>
+        </div>
+
+        {/* Service cards */}
+        {services.map(({ id, icon, title, description, pos }, index) => (
+          <div
+            key={id}
+            style={{
+              position: 'absolute',
+              left: pos.left,
+              top: pos.top,
+              transform: 'translate(-50%, -50%)',
+              width: '210px',
+              zIndex: 20,
+            }}
+          >
+            <AnimateIn delay={index * 120}>
+              <Link
+                href={`/services#${id}`}
+                className="group flex flex-col p-5 rounded-2xl border border-slate-700 hover:border-blue-500 hover:shadow-lg transition-all duration-200 bg-navy-700"
+              >
+                <div className="w-10 h-10 rounded-xl bg-navy-800 group-hover:bg-navy-900 flex items-center justify-center mb-3 transition-colors shrink-0">
+                  <svg
+                    className="w-5 h-5 text-slate-300 group-hover:text-blue-400 transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                  >
+                    {icon}
+                  </svg>
+                </div>
+                <h3 className="text-sm font-semibold text-white mb-1.5">{title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{description}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:gap-2 transition-all">
+                  Learn more
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </Link>
+            </AnimateIn>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile: standard grid */}
+      <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-5">
         {services.map(({ id, icon, title, description }, index) => (
           <AnimateIn key={id} delay={index * 60}>
             <Link
@@ -100,7 +191,7 @@ export default function ServicesOverview() {
               </div>
               <h3 className="text-base font-semibold text-white mb-2">{title}</h3>
               <p className="text-sm text-slate-400 leading-relaxed flex-1">{description}</p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 group-hover:gap-2.5 transition-all">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:gap-2.5 transition-all">
                 Learn more
                 <svg
                   className="w-3.5 h-3.5"
@@ -109,12 +200,7 @@ export default function ServicesOverview() {
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
               </span>
             </Link>
@@ -135,12 +221,7 @@ export default function ServicesOverview() {
             viewBox="0 0 24 24"
             aria-hidden="true"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
         </Link>
       </div>
