@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { SectionWrapper, SectionHeading } from '@/components/ui/SectionWrapper'
 import { AnimateIn } from '@/components/ui/AnimateIn'
 
@@ -15,6 +16,7 @@ const services = [
     title: 'O365 + Security',
     description:
       'Full Microsoft 365 deployment and administration combined with Defender, Conditional Access, and compliance hardening.',
+    image: '/Images/cloud_command_center.png',
     pos: { left: '50%', top: '12%' },
     line: [50, 12] as [number, number],
   },
@@ -30,6 +32,7 @@ const services = [
     title: 'Managed IT',
     description:
       '24/7 monitoring, SLA-backed helpdesk, and proactive patch management — end-to-end IT management for a fixed monthly fee.',
+    image: '/Images/Managed_IT.png',
     pos: { left: '86%', top: '38%' },
     line: [86, 38] as [number, number],
   },
@@ -45,6 +48,7 @@ const services = [
     title: 'IT Consultancy',
     description:
       'Senior-led project management, architecture, and migrations — from greenfield deployments to legacy modernisation.',
+    image: '/Images/IT Consultancy.png',
     pos: { left: '72%', top: '81%' },
     line: [72, 81] as [number, number],
   },
@@ -60,6 +64,7 @@ const services = [
     title: 'Data Management',
     description:
       'Backup & recovery, secure data migrations, GDPR compliance, storage architecture, and DCC consultancy.',
+    image: '/Images/data management.png',
     pos: { left: '28%', top: '81%' },
     line: [28, 81] as [number, number],
   },
@@ -75,6 +80,7 @@ const services = [
     title: 'AI + Workflows',
     description:
       'Make, Power Automate, and AI integration — turning bottlenecks into intelligent, scalable automated workflows.',
+    image: '/Images/AI_Workflow.png',
     pos: { left: '14%', top: '38%' },
     line: [14, 38] as [number, number],
   },
@@ -120,7 +126,7 @@ export default function ServicesOverview() {
         </div>
 
         {/* Service cards */}
-        {services.map(({ id, title, pos }, index) => (
+        {services.map(({ id, title, image, pos }, index) => (
           <div
             key={id}
             style={{
@@ -137,9 +143,13 @@ export default function ServicesOverview() {
                 href={`/services#${id}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-lg transition-all duration-200 bg-navy-700"
               >
-                {/* Image placeholder — replace with <Image> when ready */}
-                <div className="w-full h-28 bg-navy-800 border-b border-slate-700 flex items-center justify-center">
-                  <span className="text-xs text-slate-600">image</span>
+                <div className="w-full h-28 relative overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="px-4 py-3">
                   <h3 className="text-sm font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
@@ -152,15 +162,19 @@ export default function ServicesOverview() {
 
       {/* Mobile: standard grid */}
       <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {services.map(({ id, title }, index) => (
+        {services.map(({ id, title, image }, index) => (
           <AnimateIn key={id} delay={index * 60}>
             <Link
               href={`/services#${id}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 hover:border-fuchsia-500 hover:shadow-md transition-all duration-200 bg-navy-700"
             >
-              {/* Image placeholder — replace with <Image> when ready */}
-              <div className="w-full h-36 bg-navy-800 border-b border-slate-700 flex items-center justify-center">
-                <span className="text-xs text-slate-600">image</span>
+              <div className="w-full h-36 relative overflow-hidden">
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="px-5 py-4">
                 <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-400 transition-colors">{title}</h3>
