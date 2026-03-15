@@ -10,6 +10,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"*.{json,mjs,ts}\""
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "next": "^15.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
